@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Catslist</title>
+	<style type="text/css">
+		.Button {
+			display: inline-block;
+			margin: 4px 2px;
+			cursor: pointer;
+			padding: 14px 40px ;  
+			text-align: center;
+			font-size: 12px;
+			border-radius: 8px;
+			background-color: white; 
+            color: black; 
+            border: 2px solid #4CAF50;
+            margin-top:50px;
+		}
+		.Button:hover{
+			background-color: DarkCyan ;
+            color: white;
+		}
+		.Buuton:focus{
+			 background-color: #ffdb3a;
+		}
+		h1{
+			 top: 120px;
+			 text-align: center;
+			  position: relative;
+		}
+
+		.Div{
+		    position: relative;
+			top:150px;
+			left: 500px; 
+			bottom: 40px ;
+			border: 3px outset rgb(161 , 211 , 201);
+            background-color: lightblue;    
+           
+            width: 900px;
+            height: 500px;
+		}
+		#h2{
+			margin-left:400px;
+			 margin-top:-63px;
+		}
+		#h3{
+			margin-left:50px;
+			margin-top:50px;
+		}
+
+	</style>
+</head>
+<body>
+<button type="button" class="Button" onClick="parent.location='file:///C:/Users/aauj/Desktop/SaraBoshnaq/part2.html'">Borrow a cat </button>
+<button type="button" class="Button">lend acat </button>
+<h1>List a cat to Lend</h1>
+
+<form class="Div">
+   <h3 style="margin-left:50px" >name</h3>
+   <input style="margin-left:50px" type="text" name="array[]" value="" /><br>
+  
+
+   <h3 id="h2">Owner's Email </h3>
+   <input style="margin-left:400px" type="text" name="array[]" value="" /><br>
+
+   <h3 id="h3">Image Url </h3>
+   <input style="margin-left:50px ; width:800px; height: 25px;" type="text" name="array[]" value="" /><br>
+   <h4 style="margin-left:50px; margin-top:0px;" >a good image increases brrow chances 500%</h4>
+
+   <h3 style="margin-left:50px; margin-top:50px;">adoption message </h3>
+   <input style="margin-left:50px ; width:800px; height: 130px;" type="text" name="array[]" value="" /><br>
+
+   <button type="button" onclick="getInformation()" style="margin-left:800px; margin-top:10px; background-color:Teal; text-align: center;border-radius: 8px; border: 2px solid #4CAF50;">Add Cat </button>
+</form>
+
+<p id="p1"></p>
+
+<script type="text/javascript">
+   
+    var information = [] ;  
+	function getInformation () {
+		var input = document.getElementByName('array[]');
+		 for (var i = 0; i < input.length; i++) { 
+                var a = input[i].value; 
+                information.push(a);
+            }       
+	}
+
+	if( !window.localStorage) alert("Sorry, you're using an ancient browser");
+    else {
+    localStorage.myArray = JSON.stringify(someArray);
+}
+	
+   
+
+</body>
+</html>
